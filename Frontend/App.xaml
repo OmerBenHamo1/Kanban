@@ -1,0 +1,70 @@
+﻿<Application x:Class="IntroSE.Kanban.Frontend.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:IntroSE.Kanban.Frontend">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+
+            <Style TargetType="Window">
+                <Setter Property="Height" Value="500"/>
+                <Setter Property="Width" Value="500"/>
+                <Setter Property="Background" Value="WhiteSmoke"/>
+                <!-- Change the background color here -->
+            </Style>
+            
+            <Style TargetType="Button" BasedOn="{StaticResource MaterialDesignRaisedSecondaryLightButton}">
+                <Setter Property="Width" Value="70"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="Foreground" Value="Black"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="ToolTip" Value="Resource name : MaterialDesignRaisedSecondaryLightButton"/>
+                <Setter Property="Background" Value="RosyBrown" />
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="70"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+            </Style>
+            <Style TargetType="ListBox">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="BorderThickness" Value="5" />
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="ItemContainerStyle">
+                    <Setter.Value>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        </Style>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="BorderBrush" Value="Transparent"/>
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+            </Style>
+            <Style x:Key="DataGridColumnHeaderStyle" TargetType="DataGridColumnHeader">
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="Background" Value="Transparent"/>
+            </Style>
+
+            <Style x:Key="DataGridCellStyle" TargetType="DataGridCell">
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="FontSize" Value="20" />
+            </Style>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

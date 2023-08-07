@@ -1,0 +1,25 @@
+﻿<Window x:Class="IntroSE.Kanban.Frontend.View.UserMainSpace"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IntroSE.Kanban.Frontend"
+        mc:Ignorable="d"
+        Title="UserMainSpace" Height="500" Width="300" Background="WhiteSmoke">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="203*"/>
+            <RowDefinition Height="39*"/>
+        </Grid.RowDefinitions>
+        <Label  Content="{Binding Mode=OneWay, Path=ErrorMessage}" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="147"/>
+        <Label Content="{Binding User.Email}" HorizontalAlignment="Center" FontSize="20" Margin="0,10,0,0" VerticalAlignment="Top"/>
+        <DataGrid Background="White" FontSize="20" FontWeight="Bold" ItemsSource="{Binding Boards}" AutoGenerateColumns="False" VerticalAlignment="Top" HorizontalAlignment="Center"  Margin="0,75,0,0" Width="250" Height="300" SelectionChanged="DataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Board ID" Binding="{Binding Mode=OneWay}" FontSize="10" FontWeight="Thin" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Get In Progress Tasks" Width="140"  Click="Button_Click_2"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,50" RenderTransformOrigin="0.248,1.448" Grid.RowSpan="2"/>
+        <Button Content="log out" Width="140"  Click="Button_Click_3"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,10" RenderTransformOrigin="-1.234,9.077" Grid.Row="1"/>
+
+    </Grid>
+</Window>

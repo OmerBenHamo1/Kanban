@@ -1,0 +1,35 @@
+﻿<Window x:Class="IntroSE.Kanban.Frontend.View.InPogressTasksWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IntroSE.Kanban.Frontend.View"
+        mc:Ignorable="d"
+        Title="InPogressTasksWindow" Height="300" Width="700">
+    <Grid>
+        <DataGrid x:Name="dataGrid" ItemsSource="{Binding InProgressTasks}" GridLinesVisibility="All" HorizontalGridLinesBrush="Black" VerticalGridLinesBrush="Black" ColumnWidth="*" AutoGenerateColumns="False" Background="Transparent" HorizontalAlignment="Center" Width="698" SelectionUnit="FullRow"
+          SelectedItem="{Binding SelectedTask}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" 
+                            HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" 
+                            CellStyle="{StaticResource DataGridCellStyle}" />
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" 
+                            HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" 
+                            CellStyle="{StaticResource DataGridCellStyle}" />
+                <DataGridTextColumn Header="Description" Binding="{Binding Description}" 
+                            HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" 
+                            CellStyle="{StaticResource DataGridCellStyle}" />
+                <DataGridTextColumn Header="DueDate" Binding="{Binding DueDate}" 
+                            HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" 
+                            CellStyle="{StaticResource DataGridCellStyle}" />
+                <DataGridTextColumn Header="CreationTime" Binding="{Binding CreationTime}" 
+                            HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" 
+                            CellStyle="{StaticResource DataGridCellStyle}" />
+                <DataGridTextColumn Header="Assignee" Binding="{Binding Assignee}" 
+                            HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" 
+                            CellStyle="{StaticResource DataGridCellStyle}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
